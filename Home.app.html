@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos y Apps Premium</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            user-select: none;
+        }
+
+        body {
+            background-color: #121212;
+            color: white;
+            width: 100vw;
+            position: relative;
+            overflow-x: hidden;
+            padding-bottom: 100px; /* Espacio para el menú inferior */
+        }
+
+        .logo {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            width: 80px;
+            height: auto;
+            z-index: 1000;
+        }
+
+        .center-card {
+            width: 240px;
+            height: 320px;
+            background: linear-gradient(135deg, #232323, #1a1a1a);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+            margin: 90px auto 20px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+        }
+
+        .center-card img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .section {
+            width: 100%;
+            padding: 20px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .carousel-container {
+            display: flex;
+            gap: 15px;
+            padding-bottom: 10px;
+            scroll-behavior: smooth;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .carousel-card {
+            width: 160px;
+            height: 220px;
+            background: linear-gradient(135deg, #232323, #1a1a1a);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+            flex-shrink: 0;
+        }
+
+        .carousel-card img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .carousel-card img:hover {
+            transform: scale(1.08);
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, #1DB954, #17a247);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 22px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+            display: inline-block;
+            width: 80%;
+            text-align: center;
+        }
+
+        .download-btn:hover {
+            background: #17a247;
+            transform: scale(1.05);
+        }
+
+        .carousel-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Menú inferior - Estilo moderno */
+        .bottom-menu {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #232323;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 15px 0;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .bottom-menu a {
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .bottom-menu a i {
+            width: 32px;
+            height: 32px;
+            margin-bottom: 5px;
+            transition: 0.3s;
+        }
+
+        .bottom-menu a:hover {
+            color: #1DB954;
+        }
+
+        .bottom-menu a:hover i {
+            transform: scale(1.1);
+        }
+
+        .bottom-menu a.active {
+            color: #1DB954;
+        }
+
+    </style>
+</head>
+
+<body>
+    <img src="https://fontmeme.com/permalink/250207/52d6d9b4b753d7dbc2279e22f8ac4951.png" alt="Logo App" class="logo">
+
+    <div class="center-card">
+        <img src="https://espacioapk.com/wp-content/uploads/2025/02/poppy-playtime-4-apk--150x150.webp" alt="Destacado" loading="lazy">
+        <span>Poppy Playtime 4</span>
+        <a href="go:poppy4" class="download-btn">Descargar</a>
+    </div>
+
+    <div id="sections-container">
+        <div class="section">
+            <div class="section-title">Sugerencias Para Ti</div>
+            <div class="carousel-container">
+                <!-- Aquí se agregan las 8 cards -->                    
+                <div class="carousel-card">
+                    <img src="https://espacioapk.com/wp-content/uploads/2023/04/playhub-plus-apk.webp" alt="PlayHUB+" />
+                    <span>PlayHub+</span>
+                    <a href="go:playhub" class="download-btn">Descargar</a>
+                </div>
+                <div class="carousel-card">
+                    <img src="https://espacioapk.com/wp-content/webp-express/webp-images/uploads/2023/02/kawaii-animes-apk-min-300x300.png.webp" alt="Kawaii Animes" />
+                    <span>Kawaii Animes</span>
+                    <a href="go:Kawaii" class="download-btn">Descargar</a>
+                </div>
+                <div class="carousel-card">
+                    <img src="https://espacioapk.com/wp-content/webp-express/webp-images/uploads/2021/06/pou-300x300.jpg.webp" alt="Pou MOD" />
+                    <span>Pou MOD</span>
+                    <a href="go:Pou1" class="download-btn">Descargar</a>
+                </div>
+                <div class="carousel-card">
+                    <img src="https://espacioapk.com/wp-content/webp-express/webp-images/uploads/2023/03/pixelcut-pro-apk-1-300x300.png.webp" alt="PixelCut Pro" />
+                    <span>Pixelcut Pro</span>
+                    <a href="go:pixelcut" class="download-btn">Descargar</a>
+                </div>
+                <div class="carousel-card">
+                    <img src="https://espacioapk.com/wp-content/uploads/2024/02/Melon-VPN-Premium-APK.webp" alt="Melon VPN" />
+                    <span>Melon VPN</span>
+                    <a href="go:melon1" class="download-btn">Descargar</a>
+                </div>
+                <div class="carousel-card">
+                    <img src="https://espacioapk.com/wp-content/webp-express/webp-images/uploads/2023/01/psiphon-pro-apk-2023-min-300x300.png.webp" alt="Psiphon Pro" />
+                    <span>Psiphon Pro</span>
+                    <a href="go:psiphon" class="download-btn">Descargar</a>
+                </div>
+                <div class="carousel-card">
+                    <img src="https://espacioapk.com/wp-content/uploads/2024/11/bad-parenting-android-300x300.webp" alt="Bad Parenting" />
+                    <span>Bad Parenting</span>
+                    <a href="go:Badplay" class="download-btn">Descargar</a>
+                </div>
+                <div class="carousel-card">
+                    <img src="https://espacioapk.com/wp-content/webp-express/webp-images/uploads/2023/06/minecraft-java-apk-1-300x300.png.webp" alt="Pojava launcher" />
+                    <span>Pojava launcher</span>
+                    <a href="go:pojav1" class="download-btn">Descargar</a>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-title">Juegos MODS</div>
+            <div class="carousel-container">
+                <!-- Aquí se agregan las 8 cards -->
+                <div class="carousel-card">
+                    <img src="https://espacioapk.com/wp-content/uploads/2023/06/video-game-premium-apk.webp" alt="Video Game" />
+                    <span>Vídeo Game</span>
+                    <a href="#" class="download-btn">Descargar</a>
+                </div>
+                <div class="carousel-card">
+                    <img src="https://espacioapk.com/wp-content/uploads/2024/07/Call-of-Duty-Black-Ops-Zombies-2-300x300.webp" alt="Call Of Duty Black Ops Zombies" />
+                    <span>Call Of Duty Black</span>
+                    <a href="#" class="download-btn">Descargar</a>
+                </div>
+                <div class="carousel-card">
+                    <img src="https://espacioapk.com/wp-content/uploads/2022/05/Beach-Buggy-Racing-Mod-APK.webp" alt="Beach Buggy Racing" />
+                    <span>Beach Buggy Racing</span>
+                    <a href="#" class="download-btn">Descargar</a>
+                </div>
+                <div class="carousel-card">
+                    <img src="https://espacioapk.com/wp-content/webp-express/webp-images/uploads/2022/10/beat-fire-mod-apk-dinero-infinito-min-300x300.png.webp" alt="Beat Fire" />
+                    <span>Beat Fire</span>
+                    <a href="#" class="download-btn">Descargar</a>
+                </div>
+                <div class="carousel-card">
+                    <img src="https://espacioapk.com/wp-content/webp-express/webp-images/uploads/2023/06/SpiderManMilesMoralesPS4-1-1-1-1-300x300.jpg.webp" alt="Spiderman Miles Morales" />
+                    <span>Spiderman Miles Morales</span>
+                    <a href="#" class="download-btn">Descargar</a>
+                </div>
+                <div class="carousel-card">
+                    <img src="https://espacioapk.com/wp-content/webp-express/webp-images/uploads/2022/03/zombie-age-3-mod-dinero-ilimitado-min-300x300.png.webp" alt="Zombie Age 3" />
+                    <span>Zombie Age 3</span>
+                    <a href="#" class="download-btn">Descargar</a>
+                </div>
+                <div class="carousel-card">
+                    <img src="https://espacioapk.com/wp-content/webp-express/webp-images/uploads/2025/03/poppy-playtime-4-apk-1-300x300.png.webp" alt="Poppy Playtime 4" />
+                    <span>Poppy playtime 4</span>
+                    <a href="#" class="download-btn">Descargar</a>
+                </div>
+                <div class="carousel-card">
+                    <img src="https://espacioapk.com/wp-content/uploads/2022/10/swamp-attack-mod-apk.webp" alt="Swamp Attack" />
+                    <span>Swamp attack</span>
+                    <a href="#" class="download-btn">Descargar</a>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-title">Apps Premium</div>
+            <div class="carousel-container">
+                <!-- Aquí se agregan las 8 cards -->
+                <div class="carousel-card">
+                    <img src="https://espacioapk.com/wp-content/webp-express/webp-images/uploads/2022/05/imagen_2022-05-17_091204041-min-300x300.png.webp" alt="ZEDGE" />
+                    <span>ZEDGE</span>
+                    <a href="#" class="download-btn">Descargar</a>
+                </div>
+                <div class="carousel-card">
+                    <img src="https://espacioapk.com/wp-content/uploads/2024/12/VIVACUT-PRO-APK-300x300.webp" alt="VivaCut Pro" />
+                    <span>VivaCut Pro</span>
+                    <a href="#" class="download-btn">Descargar</a>
+                </div>
+                <div class="carousel-card">
+                    <img src="https://espacioapk.com/wp-content/uploads/2023/11/telegram-premium-apk.webp" alt="Telegram" />
+                    <span>Telegram</span>
+                    <a href="#" class="download-btn">Descargar</a>
+                </div>
+                <div class="carousel-card">
+                    <img src="https://espacioapk.com/wp-content/webp-express/webp-images/uploads/2023/03/crunchyroll-apk-1-300x300.png.webp" alt="Crunchyroll" />
+                    <span>Crunchyroll</span>
+                    <a href="#" class="download-btn">Descargar</a>
+                </div>
+                <div class="carousel-card">
+                    <img src="https://espacioapk.com/wp-content/webp-express/webp-images/uploads/2021/06/imagen_2021-06-11_231148-300x300.png.webp" alt="cool text And Symbols" />
+                    <span>Cool text and symbol</span>
+                    <a href="#" class="download-btn">Descargar</a>
+                </div>
+                <div class="carousel-card">
+                    <img src="https://espacioapk.com/wp-content/webp-express/webp-images/uploads/2021/12/INSHOT-PRO-APK-300x300.jpg.webp" alt="Inshot Pro" />
+                    <span>Inshot Pro</span>
+                    <a href="#" class="download-btn">Descargar</a>
+                </div>
+                <div class="carousel-card">
+                    <img src="https://espacioapk.com/wp-content/uploads/2023/05/moises-android-300x300.webp" alt="Moises" />
+                    <span>Moises</span>
+                    <a href="#" class="download-btn">Descargar</a>
+                </div>
+                <div class="carousel-card">
+                    <img src="https://espacioapk.com/wp-content/webp-express/webp-images/uploads/2022/04/voloco-premium-apk-ultima-version-min-300x300.png.webp" alt="Voloco" />
+                    <span>Voloco</span>
+                    <a href="#" class="download-btn">Descargar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-menu">
+    <a href="go:home" class="active">
+        <i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path fill="currentColor" d="M12 3L2 12h3v7h14v-7h3L12 3z"></path>
+            </svg>
+        </i>
+        <div>Inicio</div>
+    </a>
+    <a href="http://action_search">
+        <i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path fill="currentColor" d="M15.55 13.44a8.23 8.23 0 1 0-1.11 1.1l5.71 5.72 1.11-1.11-5.72-5.71zM10 16a6 6 0 1 1 0-12 6 6 0 0 1 0 12z"></path>
+            </svg>
+        </i>
+        <div>Buscar</div>
+    </a>
+    <a href="https://t.me/METFLIXHUBINC" target="_blank">
+        <i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path fill="currentColor" d="M21.75 3.5c-.3-.2-.7-.3-1.1-.1L2.3 10.3c-.9.4-.8 1.7.2 2l4.7 1.5 2.3 6.2c.3.8 1.3.9 1.7.2l3.1-4 4.8 3.5c.8.6 2 .2 2.2-.8l2.5-14c.1-.5-.2-1-.5-1.2z"></path>
+            </svg>
+        </i>
+        <div>Telegram</div>
+    </a>
+</div>
